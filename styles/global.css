@@ -1,0 +1,223 @@
+:root {
+    /* main colors */
+    --accent-orange: #FF9D60;
+    --accent-cyan: #2EC5B6;
+    --dark-blue: #011627;
+    --main-bg: #F8F8F8;
+
+    /* gray-colors */
+    --black: #000000;
+    --gray1: #373737;
+    --gray2: #6D6D6D;
+    --gray3: #929292;
+    --gray4: #C6C6C6;
+    --gray5: #EFEFEF;
+    --white: #fff;
+
+    /* state colors */
+    --error: #C82727;
+    --success: #79D971;
+    --info: #2EC5B6;
+    --warning: #FFC045;
+}
+
+/* how to use colors tip */
+.myBestStyle {
+    background-color: var(--dark-blue);
+}
+
+
+/* basic */
+
+* {
+    font-family: 'Roboto';
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input {
+    color: inherit;
+    background-color: inherit;
+    outline: none;
+    border: none;
+}
+
+
+/* button styles */
+
+.btn {
+    border-radius: 10px;
+    padding: 14px 15px;
+    cursor: pointer;
+    transition: 0,5s ease;
+}
+
+.btn:disabled {
+    background-color: var(--gray4);
+    color: var(--gray2);
+    border-color: var(--gray2) !important;
+    cursor: default;
+}
+
+
+.btn-wide {
+    border-radius: 10px;
+    padding: 14px 30px;
+}
+
+.btn-icon {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+.btn-outline {
+    border: 2px solid;
+}
+
+
+.btn-black {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.btn-black:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan) !important;
+}
+
+.btn-black:active {
+    color: var(--accent-orange);
+    border-color: var(--accent-orange) !important;
+}
+
+
+.btn-orange {
+    background-color: var(--accent-orange);
+    color: var(--black);
+}
+
+.btn-orange:hover {
+    background-color: #FFB689;
+}
+
+.btn-orange:active {
+    background-color: #FF8438;
+}
+
+
+.btn-cyan {
+    background-color: var(--accent-cyan);
+    color: var(--black);
+}
+
+.btn-cyan:hover {
+    background-color: #20DECB;
+}
+
+.btn-cyan:active {
+    background-color: #14B6A6;
+}
+
+
+.btn-black.btn-outline {
+    border-color: var(--white);
+}
+
+.btn-orange.btn-outline {
+    border-color: #FF7723;
+}
+
+.btn-cyan.btn-outline {
+    border-color: #08A797;
+}
+
+
+/* icons and icons-btn */
+.ic {
+    color: var(--black);
+}
+
+.ic.white {
+    color: var(--white);
+}
+
+.ic:hover {
+    color: var(--accent-cyan);
+}
+
+.ic:active {
+    color: var(--accent-orange);
+}
+
+.ic.cyan {
+    color: cyan;
+} 
+
+.ic.active {
+    color: var(--accent-orange);
+}
+
+
+/* input styles */
+
+input {
+    padding: 10px 15px;
+    border: 2px var(--gray3) solid;
+    border-radius: 10px;
+    color: var(--black);
+    background-color: var(--white);
+    transition: 0,5s ease;
+}
+
+input:disabled {
+    border-color: var(--gray4);
+    color: var(--gray4);
+}
+
+input:focus {
+    background-color: #EFF6F5;
+    border-color: var(--accent-cyan);
+}
+
+input:hover {
+    background-color: #EFF6F5;
+    border-color: var(--accent-cyan);
+}
+
+input:hover::placeholder {
+    color: var(--accent-cyan);
+}
+
+input::placeholder {
+    color: var(--gray2);
+}
+
+input:not(:placeholder-shown) {
+    color: var(--black);
+    border-color: var(--black) !important;
+}
+
+input.error {
+    border-color: var(--error);
+}
+
+input.success {
+    border-color: var(--success);
+}
